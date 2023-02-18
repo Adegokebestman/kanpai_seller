@@ -35,44 +35,20 @@ const Product = ({ product }) => {
       </span>
 
 
-
-        {/* {isInCart (product) && (
-          <button
-        onClick={() => {
-          increase(product);
-        }}
-        className="ml-8 mr-4 mt-8 pr-2 pt-2 pl-2 pb-2 mb-8 border rounded-full bg-[#D0F4D0] text-[#147D30] "
-      >
-        <BsPlusLg />
-      </button>
-        )}
-
-
-      <span className="pt-9">0</span>
-
-      <button  className="ml-4 mr-20 mt-8 pr-2 pt-2 pl-2 pb-2 mb-8 border rounded-full bg-[#F9BFB5] text-[#EF3838]">
-        <FaMinus />
-      </button> */}
-{/*
-      <button class="hidden mr-4 text-[#FF7E20] text-2xl ">
-        <AiOutlineShoppingCart />
-      </button> */}
-
-
         {isInCart(product) && (
           <button
             onClick={() => {
               increase(product);
             }}
-            className="cartBtn2 text-sm md:text-lg"
+            className="cartBtn2 rounded text-sm md:text-lg"
           >
             {/* Add More */} Make Unavailable
           </button>
         )}
 
       {!isInCart(product) && (
-        <button onClick={() => addToCart(product)} className="cartBtn text-sm md:text-xl">
-          Make available
+        <button onClick={() => addToCart(product)} className="cartBtn2 rounded text-sm md:text-xl">
+          Make Unavailable
         </button>
       )}
     </ul>

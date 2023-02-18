@@ -26,8 +26,10 @@
     font-weight: bold;
   }
 
-  .status{
-    font-weight: lighter !important;
+  .bar{
+    /* font-weight: lighter !important;
     font-size: small;
-    margin-right: 45px;
+    margin-right: 45px; */
+    display: flex;
+    flex-direction:inherit
   }

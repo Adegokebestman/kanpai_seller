@@ -9,7 +9,7 @@ export { default as userNotification } from './userNotification';
 export { default as UserProfile } from './UserProfile';
 export { default as ShippingInfo } from './ShippingInfo';
 export { default as UserPayment } from './UserPayment';
-// export { default as SparkLine } from './Charts/SparkLine';
+export { default as CustomerOrder } from './CustomerOrder';
 export { default as LineChart } from './Charts/LineChart';
 // export { default as Stacked } from './Charts/Stacked';
 // export { default as Pie } from './Charts/Pie';

@@ -13,7 +13,7 @@ export { default as MySettings } from './MySettings';
 export { default as UserInfo } from './UserInfo';
 export { default as Login } from './Login';
 export { default as AddProducts } from './AddProducts';
-// export { default as Line } from './Charts/Line';
+export { default as ModifyOrders } from './ModifyOrders';
 // export { default as Pie } from './Charts/Pie';
 // export { default as Pyramid } from './Charts/Pyramid';
 // export { default as Stacked } from './Charts/Stacked';

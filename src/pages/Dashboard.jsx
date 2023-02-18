@@ -26,37 +26,22 @@ const Dashboard = () => {
 const [userData, setUserData] = useState({
   labels: UserData.map((data) => data.month) ,
   datasets: [{
-    label:"users Gained",
+    label:"User Gained",
     data:UserData.map((data) => data.userGain),
     borderColor: '#9747FF',
-    pointBorderWidth: 4,
-    pointBorderColor: '#9747FF',
+    pointBorderWidth: 0,
+    backgroundColor: 'transparent',
+    pointBorderColor: 'transparent',
+    tension: 0.4,
+    fill: true,
+    backgroundColor: "#B8ABCE59",
 
   }],
 
 });
 
-const options = {
-  plugins: {
-    legends:false
-  },
-x: {
-grid:{
-display: false
-}
-},
-y: {
-min: 2,
-max:10,
-ticks: {
-stepSize: 2,
-callback: (value) =>value + 'k'
-},
-grid:{
-  borderDash: [10]
-}
-}
-}
+
+
 
 
 
@@ -75,10 +60,7 @@ grid:{
 
 </div>
 </div>
-{/* button */}
-  {/* <div className='mt-6'>
-<Button color="white" bgColor="#FF7E20" text="Download" borderRadius="10px" />
-  </div> */}
+
     </div>
 
 
@@ -106,7 +88,8 @@ grid:{
 
 {/* Chart */}
     <div className='boxShadow bg-white rounded-xl w-11/12 ml-4 p-6  md:w-11/12 md:p-20 md:ml-16 mt-6'>
-      <LineChart chartData={userData}   />
+    <span className='font-medium text-xl'>Selling Statistics</span>
+    <LineChart chartData={userData}   > </LineChart>
     </div>
 
 

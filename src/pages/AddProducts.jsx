@@ -5,14 +5,15 @@ import {BsCamera} from 'react-icons/bs';
 
 const AddProducts = () => {
   return (
-    <div>
+    <div className='mt-10'>
 <div>
 
 <button className='font-medium mr-4 text-[#5B5856] text-2xl border border-white sidebar rounded-lg p-2'>
-<Link to='../MyOrder' >
+<Link to='../Inventory' >
 <IoIosArrowBack/>
 </Link>
  </button>
+
  <p className='font-semibold text-2xl inline-block ml-2'>
    Add Product </p>
 

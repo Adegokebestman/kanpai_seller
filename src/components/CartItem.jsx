@@ -47,7 +47,9 @@ const { removeFromCart, increase, decrease } = useContext(CartContext);
 
 
 
-<button className='cartBtn3 text-lg md:text-2xl px-2 md:px-10'> Order  </button>
+<button style={{background: "linear-gradient(180deg, #2F86FB 0%, #004AAD 100%)"}} className='cartBtn3 text-lg md:text-xl px-2 md:px-7 text-white'> Modify  </button>
+<button className='cartBtn3 text-lg md:text-xl  px-2 md:px-7 border-2 border-[#FF7E20] text-[#FF7E20]'> Accept Order  </button>
+
 </ul>
 
   )

@@ -4,7 +4,7 @@ import {FiSettings} from 'react-icons/fi';
 import {TooltipComponent} from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Dashboard, Order, ShipAddress, PaymentMethod, CheckOut, Message, Inventory, Myorder, MySettings, OrderTrack, UserInfo, Login, Notification, AddProducts } from './pages';
+import { Dashboard, Order, ShipAddress, PaymentMethod, CheckOut, Message, Inventory, Myorder, MySettings, OrderTrack, UserInfo, Login, Notification, AddProducts, ModifyOrders } from './pages';
 import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
@@ -59,6 +59,7 @@ const App = () => {
     <Route path="/login" element={<Login />} />
     <Route path="/notification" element={<Notification />} />
     <Route path="/addproducts" element={<AddProducts />} />
+    <Route path="/modifyorders" element={<ModifyOrders />} />
 
 
 
