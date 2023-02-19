@@ -40,14 +40,14 @@ const Product = ({ product }) => {
             onClick={() => {
               increase(product);
             }}
-            className="cartBtn2 rounded text-sm md:text-lg"
+            className="cartBtn2 rounded font-semibold text-sm md:text-sm"
           >
             {/* Add More */} Make Unavailable
           </button>
         )}
 
       {!isInCart(product) && (
-        <button onClick={() => addToCart(product)} className="cartBtn2 rounded text-sm md:text-xl">
+        <button onClick={() => addToCart(product)} className="cartBtn2 rounded text-sm md:text-sm">
           Make Unavailable
         </button>
       )}
