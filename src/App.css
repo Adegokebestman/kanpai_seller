@@ -18,7 +18,7 @@
     background-color: white !important;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 .dashboard {
 gap: 135px !important;
 }
@@ -29,7 +29,19 @@ height: 15rem !important; */
 }
 }
 
-
+@media (max-width: 480px) {
+  .dashboard {
+  gap: 15px !important;
+    flex-wrap: nowrap !important;
+  }
+  .dashboard-content{
+    padding-top: 1rem !important;
+    height: 12rem !important;
+    }
+    .hero {
+      width: 100% !important;
+    }
+}
 
 /* ends here */
 .nav-item,
