@@ -55,7 +55,7 @@ const AddProducts = () => {
       </div>
 
             <div className="col-span-full sm:col-span-2">
-            <label for="firstname" className="block mb-1 ml-1">Unit Proce </label>
+            <label for="firstname" className="block mb-1 ml-1">Unit Price </label>
 			<input id="firstname" type="text"  required="" className="block w-full p-4   border-[#AF501A] rounded-xl focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-800"
 				 value={FormData.firstname} onChange={(event) => setFormData({...FormData, firstname: event.target.value})}
 			/></div>
@@ -79,13 +79,14 @@ const AddProducts = () => {
 			/></div>
 
 <div  className='col-span-full sm:col-span-2'>
-        <label for="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+      <label for="Toggle1" className="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+	{/* <span>Left</span> */}
 	<span className="relative">
 		<input id="Toggle1" type="checkbox" className="hidden peer" />
-		<div className="w-10 h-6 rounded-full shadow-inner bg-[#D9D9D9] dark:bg-gray-400 peer-checked:dark:bg-violet-400"></div>
-		<div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full bg-white shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800"></div>
+		<div className="w-10 h-6 rounded-full shadow-inner bg-gray-400 peer-checked:bg-[#FF7E20]"></div>
+		<div className="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto bg-white"></div>
 	</span>
-	<span className='uppercase'>CLick To Make Available</span>
+	<span>CLICK TO MAKE AVAILABLE</span>
 </label>
 </div>
 

@@ -37,7 +37,7 @@ const AddProduct = () => {
       </div>
 
             <div className="col-span-full sm:col-span-2">
-            <label for="firstname" className="block mb-1 ml-1">Unit Proce </label>
+            <label for="firstname" className="block mb-1 ml-1">Unit Price </label>
 			<input id="firstname" type="text"  required="" className="block w-full p-4   border-[#AF501A] rounded-xl focus:outline-none focus:ring focus:ring-opacity-25 focus:ring-violet-400 dark:bg-gray-800"
 				 value={FormData.firstname} onChange={(event) => setFormData({...FormData, firstname: event.target.value})}
 			/></div>
