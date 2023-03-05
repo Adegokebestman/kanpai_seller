@@ -9,7 +9,13 @@ import axios from '../api/axios';
 const PRDUCTLIST = '/products/getAllProducts'
 
  export const Order = () => {
-  const [products, setProducts] = useState('');
+  const [products, setProducts] = useState([]);
+
+const [isAvailable, setIsAvailable] = useState(products.status);
+
+const handleToggleStatus = () => {
+  setIsAvailable(!isAvailable);
+};
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -22,7 +28,7 @@ const PRDUCTLIST = '/products/getAllProducts'
           },
         })
         console.log(response.data)
-        setProducts(response.data);
+        setProducts(response.data.products);
       } catch (error) {
         console.error(error);
       }
@@ -46,39 +52,41 @@ const PRDUCTLIST = '/products/getAllProducts'
 <div className='mt-10 flex flex-wrap lg:flex-nowrap justify-center'>
     <div className='flex  justify-center items-center absolute'>
 <div className='flex m-3 flex-wrap justify-center gap-8 items-center '>
-
 {/* map  */}
-{products.map((product) => (
-  <div key={product._id}>
+{products.map((item, index) => (
+  <div key={item._id}>
   <ul className="flex container flex-row bg-white text-center boxShadow  dark:text-gray-200 dark:bg-secondary-dark-bg md:w-full h-32 p-4 rounded-2xl">
       <li className="flex-item pr-2 md:pr-4">
-        <img src={product.photo} />
+        <img src={item.photo} />
       </li>
-      <li className="mr-2 mt-4 md:mr-8 md:mt-8"> {product.available}</li>
+      <li className="mr-2 mt-4 md:mr-8 md:mt-8"> {item.available}</li>
 
       <li className="pt-4 leading-5 mr-2 md:font-medium  md:p-8 md:mr-8">
-        {product.name} <br />
+        {item.productName} <br />
         {/* <span className="status"> Available {product.quantity} </span> */}
       </li>
 
-      <li className="ml-2 mr-3 md:ml-8 md:mr-16 mt-8 md:font-medium"> {product.price} </li>
+      <li className="ml-2 mr-3 md:ml-8 md:mr-16 mt-8 md:font-medium">$ {item.price} </li>
 
-      <li className="ml-2 mr-3 md:ml-8 md:mr-16 mt-8 md:font-medium"> {product.minOrderAmount} </li>
+      {/* <li className="ml-2 mr-3 md:ml-8 md:mr-16 mt-8 md:font-medium"> {item.available} </li> */}
 
       <span className="rounded-full border-white bg-[#D0F4D0] text-[#147D30] mt-6 mr-5 pt-2 pb-4 pr-2 pl-2 mb-8
       md:mt-8 md:pt-2 md:mr-10 md:mb-8 md:pb-8 md:pr-4 md:pl-4 md:rounded-full ">
-        {product.status}
+        {item.status ?  "available" : "unavailable" }
       </span>
 
 
 
 
-
+        <button onClick={handleToggleStatus}  className="cartBtn2 rounded text-sm md:text-sm">
+        {isAvailable ? "Make Available" : "Make Unavailable"}
+        </button>
 
     </ul>
  </div>
 
 ))}
+
 
 </div>
 </div>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import { FaMinus } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
